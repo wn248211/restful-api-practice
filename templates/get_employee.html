@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<title>Select an employee</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="font-family:arial, sans-serif">
+	<h1 style="background:lightblue;padding:10px">
+	<a href="{{url_for('index')}}">Home</a>
+	</h1>
+	<form method="GET" action="{{ url_for('get_emp', emp_id=emp_id)}}">
+		<div>
+			<div>
+				<span>Choose a employee ID:</span>
+				<select name="emp_id">
+					{% for i in rows %}
+					<OPTION value={{i[0]}}>{{i[0]}}</OPTION>
+					{% endfor %}
+				</select>
+			</div>
+			<button type="submit" >Go</button>
+		</div>
+	</form>
+</body>
+</html>

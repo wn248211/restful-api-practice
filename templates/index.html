@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<title>Index Test</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="font-family:arial, sans-serif">
+	<h1 style="background:lightblue;padding:10px">
+	<a href="{{url_for('index')}}">Home</a>
+	</h1>
+
+	<p>Click to see charts on different pages</p>
+
+	<h1><a href="plotly_test">Plotly Test</a></h1>
+	<h1><a href="plotly_test2">Plotly Test 2</a></h1>
+	<h1><a href="table_test">Table Test</a></h1>
+	<hr>
+	<p>Click to get different resources</p>
+	<h1><a href="{{url_for('get_all_emp')}}">All employees</a></h1>
+	<h1><a href="{{url_for('get_employee_webpage')}}">Select an employee</a></h1>
+	<hr>
+	<p>Click to create an employee</p>
+	<h1><a href="{{url_for('create_emp_webpage')}}">Create an employee</a></h1>
+	<hr>
+	<p>Click to delete an employee</p>
+	<h1><a href="{{url_for('delete_emp_webpage')}}">Delete an employee</a></h1>
+</body>
+</html>

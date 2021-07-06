@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<title>Create an employee</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="font-family:arial, sans-serif">
+	<h1 style="background:lightblue;padding:10px">
+	<a href="{{url_for('index')}}">Home</a>
+	</h1>
+	
+	<form action="{{ url_for('create_emp_form') }}" method="post">
+	<div class="row">
+      <div class="col-25">
+        <label for="emp_id">Employee Number</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="emp_id" name="employee_id" placeholder="Your employee id..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="emp_ex">Extension</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="emp_ex" name="emp_extension" placeholder="Your extension (x####)..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="emp_em">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="emp_em" name="emp_email" placeholder="Your email..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="emp_oc">Office Code</label>
+      </div>
+      <div class="col-75">
+        <select id="emp_oc" name="emp_office_code">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="emp_rt">Reports To</label>
+      </div>
+      <div class="col-75">
+        <select id="emp_rt" name="emp_report_to">
+          <option value="1002">1002</option>
+          <option value="1056">1056</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="emp_jt">Job Title</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="emp_jt" name="emp_job_title" placeholder="Your job title..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+
+  </form>
+</body>
+</html>
